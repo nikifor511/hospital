@@ -3,10 +3,8 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 
 public class ControllerLoginWindow {
 
@@ -25,7 +23,7 @@ public class ControllerLoginWindow {
     }
 
     @FXML
-    public void onLoginButtonMethod(){
+    public void onLoginButtonMethod() throws SQLException {
         System.out.println("Testing connection to PostgreSQL JDBC");
 
         try {
@@ -50,6 +48,19 @@ public class ControllerLoginWindow {
             System.out.println("You successfully connected to database now");
         } else {
             System.out.println("Failed to make connection to database");
+        }
+        Statement statement = null;
+
+        statement = connection.createStatement();
+
+        ResultSet result1 = statement.executeQuery(
+                "select * from users");
+
+        System.out.println("output statement");
+        while (result1.next()) {
+            System.out.println("N #" + result1.getRow()
+                    + "\t ID #" + result1.getInt("ID")
+                    + "\t" + result1.getString("Login"));
         }
 
     }
