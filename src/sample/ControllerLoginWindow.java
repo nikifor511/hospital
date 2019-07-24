@@ -24,6 +24,10 @@ public class ControllerLoginWindow {
     public void onLoginButtonMethod() throws SQLException {
         ResultSet res = myDB.query("select login_user('login1', 'pass2')");
         res.next();
+        if (res.getInt("login_user") == 0) {
+
+
+        }
         System.out.println(res.getInt("login_user"));
     }
 }
