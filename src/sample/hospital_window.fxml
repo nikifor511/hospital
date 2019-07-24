@@ -14,7 +14,7 @@
    <children>
       <ChoiceBox layoutX="14.0" layoutY="52.0" prefHeight="25.0" prefWidth="180.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="52.0" />
       <DatePicker layoutX="201.0" layoutY="52.0" prefHeight="25.0" prefWidth="228.0" AnchorPane.topAnchor="52.0" />
-      <TextField layoutX="437.0" layoutY="52.0" prefHeight="25.0" prefWidth="149.0" AnchorPane.leftAnchor="437.0" AnchorPane.topAnchor="52.0" />
+      <TextField fx:id="patient_text_field" layoutX="437.0" layoutY="52.0" prefHeight="25.0" prefWidth="149.0" AnchorPane.leftAnchor="437.0" AnchorPane.topAnchor="52.0" />
       <Button layoutX="489.0" layoutY="14.0" mnemonicParsing="false" text="Choose patient" AnchorPane.leftAnchor="489.0" AnchorPane.topAnchor="14.0" />
       <Label layoutX="201.0" layoutY="18.0" text="Choose date" AnchorPane.topAnchor="18.0" />
       <Label layoutX="14.0" layoutY="18.0" text="Choose doctor" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="18.0" />
