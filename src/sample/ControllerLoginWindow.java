@@ -53,14 +53,15 @@ public class ControllerLoginWindow {
 
         statement = connection.createStatement();
 
-        ResultSet result1 = statement.executeQuery(
-                "select * from users");
+        String query_str = "select login_user('login1', 'pass1')";
+
+        ResultSet result1 = statement.executeQuery(query_str);
 
         System.out.println("output statement");
         while (result1.next()) {
             System.out.println("N #" + result1.getRow()
-                    + "\t ID #" + result1.getInt("ID")
-                    + "\t" + result1.getString("Login"));
+                    + "\t login_user #" + result1.getInt("login_user"));
+//                    + "\t" + result1.getString("Login"));
         }
 
     }
