@@ -22,8 +22,8 @@ public class ControllerLoginWindow {
 
     @FXML
     public void onLoginButtonMethod() throws SQLException {
-        ResultSet res = myDB.query("select login_user('login1', 'pass1')");
-        System.out.println(res);
-
+        ResultSet res = myDB.query("select login_user('login1', 'pass2')");
+        res.next();
+        System.out.println(res.getInt("login_user"));
     }
 }
