@@ -28,6 +28,17 @@ public class ControllerMainWindow {
     }
 
     @FXML
+    public void onRegistrationButtonMethod() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("registration_window.fxml"));
+        Stage LoginStage = new Stage();
+        LoginStage.setTitle("Hospital");
+        LoginStage.initModality(Modality.APPLICATION_MODAL);
+        LoginStage.setScene(new Scene(root, 300, 171));
+        LoginStage.show();
+
+    }
+
+    @FXML
     public void onQuitButtonMethod(){
         Stage stage = (Stage) status_label.getScene().getWindow();
         stage.close();
