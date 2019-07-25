@@ -17,7 +17,7 @@ import java.sql.SQLException;
 
 public class ControllerRegistrationWindow {
 
-    DB_Adapter myDB = new DB_Adapter();
+    private DB_Adapter myDB = new DB_Adapter();
 
     @FXML
     private  TextField login_text_field;
@@ -72,7 +72,5 @@ public class ControllerRegistrationWindow {
         }
         System.out.println("RERERG");
         return;
-
-
     }
 }

@@ -9,9 +9,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerLoginWindow">
    <children>
-      <TextField layoutX="80.0" layoutY="14.0" prefHeight="25.0" prefWidth="208.0" fx:id="login_text_field"/>
+      <TextField layoutX="80.0" layoutY="14.0" prefHeight="25.0" prefWidth="208.0" text="login1" fx:id="login_text_field"/>
       <Label layoutX="13.0" layoutY="18.0" text="Login" />
-      <PasswordField layoutX="80.0" layoutY="48.0" prefHeight="25.0" prefWidth="208.0" fx:id="pass_field"/>
+      <PasswordField layoutX="80.0" layoutY="48.0" prefHeight="25.0" prefWidth="208.0" text="pass1" fx:id="pass_field"/>
       <Label layoutX="14.0" layoutY="52.0" text="Password" />
       <Button layoutX="13.0" layoutY="78.0" mnemonicParsing="false" text="LogIn" onAction="#onLoginButtonMethod"/>
       <Button layoutX="236.0" layoutY="78.0" mnemonicParsing="false" text="Cancel" onAction="#onCancelButtonMethod"/>

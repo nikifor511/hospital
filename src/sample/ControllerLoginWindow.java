@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 public class ControllerLoginWindow {
 
-    DB_Adapter myDB = new DB_Adapter();
+    private DB_Adapter myDB = new DB_Adapter();
 
     @FXML
     private TextField login_text_field;
