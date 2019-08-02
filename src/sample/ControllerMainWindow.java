@@ -33,7 +33,7 @@ public class ControllerMainWindow {
         Stage LoginStage = new Stage();
         LoginStage.setTitle("Hospital");
         LoginStage.initModality(Modality.APPLICATION_MODAL);
-        LoginStage.setScene(new Scene(root, 300, 171));
+        LoginStage.setScene(new Scene(root, 300, 200));
         LoginStage.show();
 
     }

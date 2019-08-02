@@ -2,7 +2,6 @@ package sample;
 
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 
 import java.sql.ResultSet;
@@ -17,12 +16,12 @@ public class ControllerHospitalWindow   {
 
     @FXML
     public  void initialize() throws SQLException {
-        String sql_str = "select \"FIO\" from doctors";
-        ResultSet res = myDB.query(sql_str);
-        doctor_choice_box.getItems().add("Choose doctor..");
-        doctor_choice_box.setValue("Choose doctor..");
-        while (res.next()) {
-            doctor_choice_box.getItems().add(res.getString("FIO"));
+        String sql_str = "select \"Surname\", \"Name\" from doctors";
+            ResultSet res = myDB.query(sql_str);
+            doctor_choice_box.getItems().add("Choose doctor..");
+            doctor_choice_box.setValue("Choose doctor..");
+            while (res.next()) {
+                doctor_choice_box.getItems().add(res.getString("Surname") + " " + res.getString("Name"));
         }
 
     }
