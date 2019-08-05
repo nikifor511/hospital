@@ -44,24 +44,33 @@ public class ControllerLoginWindow {
         sql_str = sql_str + login_text_field.getText() + "', '" + pass_field.getText() + "')";
         ResultSet res = myDB.query(sql_str);
         res.next();
-        if (res.getInt("login_user") == 0) {
-            Parent root = FXMLLoader.load(getClass().getResource("hospital_window.fxml"));
-            Stage HospitalStage = new Stage();
-            HospitalStage.setTitle("Hospital");
-            HospitalStage.initModality(Modality.APPLICATION_MODAL);
-            HospitalStage.setScene(new Scene(root, 600, 400));
-            HospitalStage.show();
 
-            Stage stage = (Stage) login_text_field.getScene().getWindow();
-            stage.close();
-        }
-        else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Login Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Check your login/password");
-            alert.showAndWait();
-            return;
+        switch (res.getInt("login_user")) {
+            case (1):
+                Parent root = FXMLLoader.load(getClass().getResource("registry_window.fxml"));
+                Stage HospitalStage = new Stage();
+                HospitalStage.setTitle("Registry");
+                HospitalStage.initModality(Modality.APPLICATION_MODAL);
+                HospitalStage.setScene(new Scene(root, 600, 400));
+                HospitalStage.show();
+
+                Stage stage = (Stage) login_text_field.getScene().getWindow();
+                stage.close();
+                break;
+
+            case(2):
+                break;
+
+            case(3):
+                break;
+
+            default:
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Login Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Check your login/password");
+                alert.showAndWait();
+                break;
         }
     }
 }
